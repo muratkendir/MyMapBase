@@ -1,0 +1,11 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2015-05-24 09:40:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/mymapbas/public_html/system/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2015-05-24 09:40:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/mymapbas/public_html/system/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2015-05-24 09:40:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/mymapbas/public_html/system/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2015-05-24 09:40:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/mymapbas/public_html/system/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2015-05-24 09:40:34 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/mymapbas/public_html/system/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2015-05-24 09:40:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/mymapbas/public_html/system/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2015-05-24 16:36:14 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/mymapbas/public_html/system/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2015-05-24 17:10:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/mymapbas/public_html/system/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2015-05-24 17:10:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/mymapbas/public_html/system/database/drivers/mysql/mysql_driver.php 91

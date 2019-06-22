@@ -1,0 +1,157 @@
+.frames{
+
+	width:800px;
+	height:410px;
+	background: #f0f0f0;
+	border: 1px solid #333;
+	margin: 50px auto 0;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.titles_row{
+	background:#333 !important;
+}
+.column_title{
+	color:#F0F0F0 !important;
+	text-align:center;
+	font-size:14px;
+}
+.row
+{
+	height:24px;
+}
+#frame_row{
+	display:block;
+	float:left;
+	width:790px;
+	padding:4px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#frame_title{
+	float:left;
+	width:360px;
+	color:#287368;
+	text-align:center;
+}
+#frame_wms_server{
+	float:left;
+	width:180px;
+	color:#b6b6b6;
+}
+#frame_wms_layer{
+	float:left;
+	width:100px;
+	color:#b6b6b6;
+	overflow:hidden;
+}
+#frame_width{
+	float:left;
+	width:60px;
+	color:#b6b6b6;
+}
+#frame_height{
+	float:left;
+	width:60px;
+	color:#b6b6b6;
+}
+#frame_show
+{
+	float:left;
+	width:112px;
+}
+#frame_edit
+{
+	float:left;
+	width:30px;
+	font-size:11px;
+	font-weight:bold;
+}
+#frame_delete
+{
+	float:left;
+	width:30px;
+	font-size:11px;
+	font-weight:bold;
+}
+#frame_geometries
+{
+	float:left;
+	width:112px;
+	font-size:10px;
+	color:red;
+}
+#pagination a, #pagination strong 
+{
+	background: #e3e3e3;
+	padding: 4px 7px;
+	text-decoration: none;
+	border: 1px solid #cac9c9;
+	color: #292929;
+	font-size: 13px;
+}
+
+#pagination strong, #pagination a:hover 
+{
+	font-weight: normal;
+	background: #cac9c9;
+}
+.elements_on_frame
+{
+	outline: 1px solid #CAC9C9;
+	float:left;
+	width:24px;
+	height:24px;
+	margin-right:4px;
+}
+#points_on_frame
+{
+	float:left;
+	background:#E3E3E3 url(../images/points_on_frame.png) no-repeat;
+}
+#points_on_frame:hover
+{
+	background:#FE5927 url(../images/points_on_frame.png) no-repeat;
+}
+#lines_on_frame
+{
+	float:left;
+	background:#E3E3E3 url(../images/lines_on_frame.png) no-repeat;
+}
+#lines_on_frame:hover
+{
+	float:left;
+	background:#FE5927 url(../images/lines_on_frame.png) no-repeat;
+}
+#polygons_on_frame
+{
+	float:left;
+	background:#E3E3E3 url(../images/polygons_on_frame.png) no-repeat;
+}
+#polygons_on_frame:hover
+{
+	float:left;
+	background:#FE5927 url(../images/polygons_on_frame.png) no-repeat;
+}
+#all_on_frame
+{
+	background:#E3E3E3 url(../images/all_on_frame.png) no-repeat;
+}
+#all_on_frame:hover
+{
+	background:#FE5927 url(../images/all_on_frame.png) no-repeat;
+}
+#edit_frame
+{
+	float:left;
+	width:30px;
+	text-align:center;
+}
+#del_frame
+{
+	float:left;
+	width:30px;
+	text-align:center;
+}

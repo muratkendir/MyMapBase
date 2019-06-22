@@ -1,0 +1,186 @@
+body
+{
+	background:#B6B6B6;
+}
+#helper_container
+{
+	float:left;
+	width:800px;
+}
+#map 
+{
+
+	width: 440px;
+	height: 440px;
+}
+#west 
+{
+	float:left;
+	width: 470px;
+}
+#east 
+{
+	float:left;
+	left: 300px !important;
+	
+}
+.olImageLoadError 
+{
+	background-color: transparent !important;
+}
+.output
+{
+	padding:5px;
+	height:150px;
+	font-family:Courier New, Courier;
+	font-size:14px;
+	font-weight:bold;
+	width:130px;
+	text-align:center;
+	color:#348075;
+}
+#singleStatus
+{
+width:150px;
+border: none;
+margin-right: 1em;
+padding: 6px;
+text-decoration:none;
+font-weight:bold;
+font-size: 12px;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+background: #348075;
+color:white;
+box-shadow: 0 1px 0 white;
+-moz-box-shadow: 0 1px 0 white;
+-webkit-box-shadow: 0 1px 0 white;
+}
+#singleStatus:hover 
+{
+background:#287368;
+cursor:pointer
+}
+#button_toggle
+{
+	text-align:center;
+	margin-bottom:10px;
+}
+#output_area
+{
+	width:300px;
+}
+#zoom_area
+{
+	text-align:center;
+	color:#348075;
+}
+#zoom
+{
+	font-weight:bold;
+}
+#helper_text
+{
+	font-family:Arial;
+	font-size:12px;
+	width:300px;
+	background:#E0F332;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	padding:5px;
+	margin-bottom:10px;
+}
+#helper_text ul
+{
+	margin-left:20px;
+	padding-left:0;
+}
+#helper_text li
+{
+	padding:5px 0 5px 0;
+	border-bottom:1px solid #B6B6B6;
+}
+#fractional
+{
+	display:none;
+	visibility:hidden;
+}
+
+.olControlScaleBar {
+    bottom: 10px;
+    left: 10px;
+    font-family: sans-serif;
+    color: #000;
+}
+
+.olControlScaleBarBar {
+    height: 1px;
+    top: 14px;
+    background: #333;
+}
+
+.olControlScaleBarBarAlt {
+    height: 1px;
+    top: 14px;
+    background: #333;
+}
+
+.olControlScaleBarMarkerMajor {
+    height: 7px;
+    width: 1px;
+    top: 11px;
+    background: #333;
+}
+
+.olControlScaleBarMarkerMinor {
+    height: 5px;
+    width: 1px;
+    top: 12px;
+    background: #333;
+}
+
+.olControlScaleBarNumbersBox {
+    width: 40px;
+    height: 13px;
+    top: 21px;
+    font-size: 0.7em;
+}
+
+.olControlScaleBarLabelBox {
+    top: -2px;
+    height: 15px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-size: 0.7em;
+    font-variant: small-caps;
+}
+
+.olControlScaleBarLabelBoxSingleLine {
+    height: 15px;
+    width: 35px;
+    top: 5px;
+    left: 10px;
+    font-size: 0.7em;
+    font-variant: small-caps;
+}
+
+.submit_button{
+background: none repeat scroll 0 0 #666666;
+    border: 1px solid #333333;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin-right: 1em;
+	margin-bottom:10px;
+    padding: 6px;
+}
+.submit_button:hover{
+	background-color:#FE5927 !important;
+	cursor:pointer;
+}
+input[type=checkbox]{
+width:20px;
+height:20px;
+border:none !important;
+outline:none !important;
+}

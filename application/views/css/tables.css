@@ -1,0 +1,169 @@
+#table_container
+{
+	width:960px;
+	margin:0 auto;
+}
+#tables
+{
+	width:960px;
+	height:400px;
+	background: #f0f0f0;
+	margin: 10px auto 0;
+	padding: 10px;
+	border:1px solid #333;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#table_name
+{
+	width:960px;
+	height:24px;
+	color:#666;
+	text-align:center;
+	font-family:Verdana;
+	padding-top:4px;
+}
+#column_titles
+{
+	float:left;
+	padding-left:20px;
+	width:940px;
+	height:28px;
+	background:#666;
+}
+#column_name
+{
+
+	float:left;
+	height:24px;
+	padding-top:4px;
+	text-align:center;
+	background:#666;
+	color:#FFF;
+	background:url(../images/table_column_title_bg.png) right top no-repeat;
+}
+.controller_links
+{
+font-size:12px;
+font-family:Arial;
+float:left;
+width:100px;
+padding-top:3px;
+background:#666;
+	border:1px solid #333;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.controller_links a{
+text-decoration:none;
+color:#FFF !important;
+}
+.controller_links a:hover{
+text-decoration:none;
+}
+.controller_links:hover{
+background:#FE5927 !important;
+}
+.add_row
+{
+float:left;
+margin-top:8px;
+width:20px;
+height:20px;
+font-family:Arial;
+font-size:18px;
+font-weight:bold;
+text-align:center;
+background:#FFF;
+	border:1px solid #333;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.row
+{
+	float:left;
+	width:960px;
+	min-height:28px;
+	padding-top:2px;
+}
+.row_value
+{
+	float:left;
+	text-align:center;
+	height:28px;
+	overflow:hidden;
+}
+.row_num
+{
+	float:left;
+	width:20px;
+	height:16px;
+	font-size:12px;
+	font-weight:bold;
+	color:#7D7E7D;
+	font-family:Courier;
+	text-align:center;
+	
+	padding-top:4px;
+}
+#drop_column
+{
+	float:right;
+	display:inline;
+	margin-right:5px;
+	width:16px;
+	height:16px;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	background:#FFF;
+	border:1px solid #333;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#column_titles #point_edit {
+	padding-top:8px;
+}
+#column_titles #point_delete {
+	padding-top:8px;
+}
+#point_edit
+{
+	float:left;
+	width:45px;
+	font-size:11px;
+	font-weight:bold;
+	min-height:24px;
+	text-align:center;
+}
+#point_delete
+{
+	float:left;
+	width:45px;
+	font-size:11px;
+	font-weight:bold;
+	min-height:24px;
+	text-align:center;
+}
+.column_title{
+	color:#FFF !important;
+	font-weight:bold;
+	font-size:16px;
+}
+
+#pagination a, #pagination strong 
+{
+	background: #e3e3e3;
+	padding: 4px 7px;
+	text-decoration: none;
+	border: 1px solid #cac9c9;
+	color: #292929;
+	font-size: 13px;
+}
+
+#pagination strong, #pagination a:hover 
+{
+	font-weight: normal;
+	background: #cac9c9;
+}	

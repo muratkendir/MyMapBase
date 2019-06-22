@@ -1,0 +1,81 @@
+.points{
+
+	width:800px;
+	height:410px;
+	background: #f0f0f0;
+	border: 1px solid #333;
+	margin: 50px auto 0;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.titles_row{
+	background:#333 !important;
+}
+.column_title{
+	color:#FFF !important;
+	font-weight:bold;
+	font-size:16px;
+}
+#point_row{
+	display:block;
+	float:left;
+	width:790px;
+	padding:4px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#point_id{
+	float:left;
+	width:20px;
+}
+#point_title{
+	float:left;
+	width:360px;
+	color:#287368;
+	text-align:center;
+}
+#point_frame{
+	float:left;
+	width:120px;
+	color:#b6b6b6;
+}
+#point_long{
+	float:left;
+	width:100px;
+	color:#b6b6b6;
+}
+#point_lat{
+	float:left;
+	width:100px;
+	color:#b6b6b6;
+}
+#point_edit
+{
+	float:left;
+	width:30px;
+	font-size:11px;
+	font-weight:bold;
+}
+#point_delete
+{
+	float:left;
+	width:30px;
+	font-size:11px;
+	font-weight:bold;
+}
+#pagination a, #pagination strong 
+{
+	background: #e3e3e3;
+	padding: 4px 7px;
+	text-decoration: none;
+	border: 1px solid #cac9c9;
+	color: #292929;
+	font-size: 13px;
+}
+
+#pagination strong, #pagination a:hover 
+{
+	font-weight: normal;
+	background: #cac9c9;
+}	

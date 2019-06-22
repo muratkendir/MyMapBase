@@ -1,0 +1,112 @@
+#table_container
+{
+	width:960px;
+	margin:0 auto;
+}
+#tables
+{
+	width:960px;
+	height:400px;
+	background: #f0f0f0;
+	border: 1 px solid #FFFFFF;
+	margin: 10px auto 0;
+	padding: 10px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#table_name
+{
+	background:#000;
+	width:960px;
+	height:24px;
+	color:#FFF;
+	text-align:center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-family:Verdana;
+	padding-top:4px;
+}
+#column_titles
+{
+	float:left;
+	padding-left:20px;
+	height:28px;
+	background:#7d7e7d;
+}
+#column_name
+{
+
+	float:left;
+	height:24px;
+	padding-top:4px;
+	text-align:center;
+	background:#7d7e7d;
+	outline:1px solid #F0F0F0;
+	color:#FFF;
+	font-weight:bold;
+}
+.controller_links
+{
+float:left;
+margin-left:10px;
+width:120px;
+height:18px;
+font-family:Arial;
+font-size:14px;
+font-weight:bold;
+padding-top:3px;
+background:#FFF;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+}
+.add_row
+{
+float:left;
+width:20px;
+height:20px;
+font-family:Arial;
+font-size:18px;
+font-weight:bold;
+text-align:center;
+background:#FFF;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+}
+.row
+{
+	float:left;
+	width:960px;
+}
+.row_value
+{
+	float:left;
+	text-align:center;
+}
+.row_num
+{
+	float:left;
+	width:20px;
+	height:16px;
+	font-size:12px;
+	font-weight:bold;
+	color:#7D7E7D;
+	font-family:Courier;
+	text-align:center;
+	
+	padding-top:4px;
+}
+#drop_column
+{
+	float:right;
+	display:inline;
+	margin-right:5px;
+	width:16px;
+	height:16px;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	background:#FFF;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}

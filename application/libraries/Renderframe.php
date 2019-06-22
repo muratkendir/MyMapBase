@@ -1,0 +1,138 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+class Renderframe {
+
+	public function render_frame_by_id($id)
+	{
+		$CI =& get_instance();
+		$CI->load->model('frame_model');
+		$frame_properties = $CI->frame_model->show_frame($id);
+		
+		$data['frame_id'] = $frame_properties['id'] ;
+		$data['frame_title'] = $frame_properties['title'] ;
+		//Seçilen wms layerlarını aradaki virgülü atarak arraye çevirir.
+		$CI->load->model('wms_layer_model');
+		$wms_layers = explode(",", $frame_properties['wms_layer_ids']);
+		//Layerları ve layer parametrelerini ve scriptleri getirir.
+		foreach($wms_layers as $r)
+		{
+			$layers[] = $CI->wms_layer_model->get_wms_layers($r);
+			$scripts[] = $CI->wms_layer_model->get_wms_layer_scripts($r);
+		}
+		//Scriptleri arraye çevirir.
+		
+		$i=0;
+		foreach($scripts as $rw)
+		{
+			
+			if ($rw['script_id'] != 0)
+			{
+			$script_ids[]=$rw['script_id'];
+			$i++;
+			}
+			else{}
+		}
+		
+		//Scriptlerin tekil olmalarını kontrol eder.
+		if (isset($script_ids)==true)
+		{
+			$script_ids_u = array_unique($script_ids);
+		}
+		else
+		{
+			$script_ids_u[0]=0;
+		}
+		
+		//Her script için script parametrelerini çağırır.
+		$i=0;
+		foreach ($script_ids_u as $roww)
+		{
+			$get_scripts[$i] = $CI->wms_layer_model->render_wms_layer_scripts($roww);
+			$i++;
+		}
+		
+		$data['scripts'] = $get_scripts;
+		
+		$data['wms_layer_ids'] = $layers ;
+		$data['frame_width'] = $frame_properties['width'] ;
+		$data['frame_height'] = $frame_properties['height'] ;
+		
+		$center_coord = str_replace('POINT(', '', $frame_properties['AsText(get_center_point)']);
+		$center_coord = str_replace(')', '', $center_coord);
+		$center_coord = explode(' ', $center_coord);
+		
+		$data['frame_get_center_long'] = $center_coord[0] ;
+		$data['frame_get_center_lat'] = $center_coord[1] ;
+		
+		$data['frame_zoom_to_extend'] = $frame_properties['zoom_to_extend'] ;
+		$data['main_content'] = 'render_frame';
+		
+		return $data;
+	}
+	public function render_frame_by_id_for_transform($id)
+	{
+		$CI =& get_instance();
+		$CI->load->model('frame_model');
+		$frame_properties = $CI->frame_model->show_frame($id);
+		
+		$data['frame_id'] = $frame_properties['id'] ;
+		$data['frame_title'] = $frame_properties['title'] ;
+		//Seçilen wms layerlarını aradaki virgülü atarak arraye çevirir.
+		$CI->load->model('wms_layer_model');
+		$wms_layers = explode(",", $frame_properties['wms_layer_ids']);
+		//Layerları ve layer parametrelerini ve scriptleri getirir.
+		foreach($wms_layers as $r)
+		{
+			$layers[] = $CI->wms_layer_model->get_wms_layers($r);
+			$scripts[] = $CI->wms_layer_model->get_wms_layer_scripts($r);
+		}
+		//Scriptleri arraye çevirir.
+		
+		$i=0;
+		foreach($scripts as $rw)
+		{
+			
+			if ($rw['script_id'] != 0)
+			{
+			$script_ids[]=$rw['script_id'];
+			$i++;
+			}
+			else{}
+		}
+		
+		//Scriptlerin tekil olmalarını kontrol eder.
+		if (isset($script_ids)==true)
+		{
+			$script_ids_u = array_unique($script_ids);
+		}
+		else
+		{
+			$script_ids_u[0]=0;
+		}
+		
+		//Her script için script parametrelerini çağırır.
+		$i=0;
+		foreach ($script_ids_u as $roww)
+		{
+			$get_scripts[$i] = $CI->wms_layer_model->render_wms_layer_scripts($roww);
+			$i++;
+		}
+		
+		$data['scripts'] = $get_scripts;
+		
+		$data['wms_layer_ids'] = $layers ;
+		$data['frame_width'] = $frame_properties['width'] ;
+		$data['frame_height'] = $frame_properties['height'] ;
+		
+		$center_coord = str_replace('POINT(', '', $frame_properties['AsText(get_center_point)']);
+		$center_coord = str_replace(')', '', $center_coord);
+		$center_coord = explode(' ', $center_coord);
+		
+		$data['frame_get_center_long'] = $center_coord[0] ;
+		$data['frame_get_center_lat'] = $center_coord[1] ;
+		
+		$data['frame_zoom_to_extend'] = $frame_properties['zoom_to_extend'] ;
+		$data['main_content'] = 'render_frame_for_transform';
+		
+		return $data;
+	}
+}

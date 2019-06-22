@@ -1,0 +1,9 @@
+Applicaiton/Config Folder:
+config.php
+17  ->  URL
+227 ->  Password
+
+database.PHP
+60  ->  Database username
+61  ->  Database password
+62  ->  Database name

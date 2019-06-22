@@ -1,0 +1,57 @@
+#control_panel{
+	display:block;
+	width:700px;
+	margin: 20px auto 0;
+}
+
+#control_panel_left{
+	display:block;
+	float:left;
+	width:350px;
+}
+#control_panel_right{
+	display:block;
+	float:left;
+	width:350px;
+}
+.menu_box{
+	display:block;
+	float:left;
+	width: 300px;
+	margin:20px 20px 10px 10px;
+	background: #f0f0f0;
+	border: 1px solid #333;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.title{
+	text-align:center;
+	color:#B6B6B6;
+	font-weight:bold;
+	font-size:18px;
+	text-shadow:0 1px 0 white;
+}
+#database_panel
+{
+	display:block;
+	float:left;
+	width: 650px;
+	margin:20px 20px 10px 10px;
+	background: #f0f0f0;
+	border: 1px solid #333;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#left_side_db
+{
+	float:left;
+	width:315px;
+}
+#right_side_db
+{
+	float:left;
+	width:315px;
+}
+

@@ -1,0 +1,46 @@
+<?php
+class Wms_layer_model extends CI_Model
+{
+	public function list_wms_layers()
+	{
+		$this->db->select('id, title');
+		$this->db->order_by("Order", "asc"); 
+		$query = $this->db->get('0__wms_layer');
+		if ($query->num_rows() > 0)
+		{
+			foreach ($query->result() as $row)
+			{
+				$data[$row->id] = $row->title;
+			}
+		}
+		return $data;
+	}
+	public function get_wms_layers($wms_layer_id)
+	{
+		$this->db->where('id', $wms_layer_id);
+		$query = $this->db->get('0__wms_layer');
+		//echo '<div style="color:#679346">';
+		//print_r($query->result_array());
+		//echo '</div>';
+		return $query->result_array();
+		
+	}
+	public function get_wms_layer_scripts($wms_layer_id)
+	{
+		$this->db->where('id', $wms_layer_id);
+		
+		$this->db->select('script_id');
+		$query = $this->db->get('0__wms_layer');
+		echo '<div style="color:#123786">';
+		print_r($query->row_array());
+		echo '</div>';
+		return $query->row_array();
+	}
+	public function render_wms_layer_scripts($script_id)
+	{
+		$this->db->where('id', $script_id);
+		
+		$query = $this->db->get('0__wms_layer_scripts');
+		return $query->row_array();
+	}
+}

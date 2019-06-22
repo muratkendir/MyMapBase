@@ -1,0 +1,102 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+class Share extends CI_Controller
+{
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('share_model');
+		$this->load->model('point_model');
+		$this->load->model('line_model');
+	}
+	public function frame($frame_id)
+	{
+		//frame control for public sharing.
+		$frame_sharing = $this->share_model->control_sharing_status($frame_id);
+		if ($frame_sharing == 1)
+		{
+			echo '<h2>Copy the following code and paste in to your web page.</h2>';
+			echo '<textarea rows="5" cols="50">';
+			echo '<iframe src="';
+			echo base_url();
+			echo 'index.php/share/show_frame/'.$frame_id.'" width="800" height="600"></iframe>';
+			echo '</textarea>';
+		}
+		else
+		{
+			echo '<p class="error">This frame is private, not available for sharing.</p>';
+		}
+	}
+	public function show_frame($frame_id)
+	{
+			$data = $this->renderframe->render_frame_by_id($frame_id);
+			$data['title'] = 'Share Frame';
+			$this->load->view('render_share_frame', $data);
+			
+	}
+	public function point($frame_id, $point_id)
+	{
+		
+		$point_sharing = $this->share_model->control_sharing_status_for_point($point_id);
+		
+		if ($point_sharing == 1)
+		{
+			echo '<h2>Copy the following code and paste in to your web page.</h2>';
+			echo '<textarea rows="5" cols="50">';
+			echo '<iframe src="';
+			echo base_url();
+			echo 'index.php/share/show_point/'.$frame_id.'/'.$point_id.'" width="800" height="600"></iframe>';
+			echo '</textarea>';
+		}
+		else
+		{
+			echo '<p class="error">This point is private, not available for sharing.</p>';
+		}
+	}
+	public function show_point($frame_id, $point_id)
+	{
+		$data = $this->renderframe->render_frame_by_id($frame_id);
+		$data['title'] = 'Shared Point';
+		
+		$point_properties = $this->point_model->show_point($point_id);
+		
+		$data['point_id'] = $point_properties['id'];		
+		$data['point_title'] = $point_properties['title'];	
+		$data['frame_of_point_id'] = $point_properties['frame_id'];
+		$data['geometry'] = $point_properties['AsText(point_point)'];
+		
+		$this->load->view('render_share_frame', $data);
+	}
+		public function line($frame_id, $line_id)
+	{
+		
+		$line_sharing = $this->share_model->control_sharing_status_for_line($line_id);
+		
+		if ($line_sharing == 1)
+		{
+			echo '<h2>Copy the following code and paste in to your web page.</h2>';
+			echo '<textarea rows="5" cols="50">';
+			echo '<iframe src="';
+			echo base_url();
+			echo 'index.php/share/show_line/'.$frame_id.'/'.$line_id.'" width="800" height="600"></iframe>';
+			echo '</textarea>';
+		}
+		else
+		{
+			echo '<p class="error">This line is private, not available for sharing.</p>';
+		}
+	}
+	public function show_line($frame_id, $line_id)
+	{
+		$data = $this->renderframe->render_frame_by_id($frame_id);
+		$data['title'] = 'Shared Line';
+		
+		$line_properties = $this->line_model->show_line($line_id);
+		
+		$data['line_id'] = $line_properties['id'];		
+		$data['line_title'] = $line_properties['title'];	
+		$data['frame_of_line_id'] = $point_properties['frame_id'];
+		$data['geometry'] = $point_properties['AsText(line_line)'];
+		
+		$this->load->view('render_share_frame', $data);
+	}
+}
